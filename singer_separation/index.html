@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Singer Separation Demo</title>
+    <meta name="description"
+        content="Create a playlist with multiple stem tracks. Mute or solo the different stems in the playlist.">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="canonical" href="https://naomiaro.github.io/waveform-playlist/exclusive-solo.html">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <header>
+                <h1>Singer Separation</h1>
+            </header>
+            <div id="video_area" align="center" style="display:none">
+                <video id="my_video" muted style="width:100%;">
+                </video>
+            </div>
+            <div id="top-bar" class="playlist-top-bar">
+                <div class="playlist-toolbar">
+                    <div class="btn-group toolbar">
+                        <span class="btn-pause btn btn-warning" id="audio_pause">
+                            <i class="fa fa-pause"></i>
+                        </span>
+                        <span class="btn-play btn btn-success" id="audio_play">
+                            <i class="fa fa-play"></i>
+                        </span>
+                        <span class="btn-stop btn btn-danger" id="audio_stop">
+                            <i class="fa fa-stop"></i>
+                        </span>
+                        <span class="btn-rewind btn btn-success">
+                            <i class="fa fa-fast-backward"></i>
+                        </span>
+                        <span class="btn-fast-forward btn btn-success">
+                            <i class="fa fa-fast-forward"></i>
+                        </span>
+                    </div>
+                    <label class="volume font-weight-bold">Master Volume:
+                        <form>
+                            <input type="range" min="20" max="80" value="80"
+                                class="master-gain input-small form-control">
+                        </form>
+                    </label>
+                    <hr style="clear:both">
+                </div>
+            </div>
+            <!--p>
+            For energy saving, we only extract 1-minute vocal. For more info, please contact <a onclick="gtag('event', '???é»žæ?', {'event_category': 'é»žæ? contact link','event_label': 'roger web site'});" target="_blank" href="http://mirlab.org/jang">Roger Jang</a>.
+            <p-->
+            <div id="overlay" class="text-center">
+                <h5 id="spinner_text"></h5>
+                <span id="load_spinner" class="spinner-border" style="width: 5rem; height: 5rem;" role="status" aria-hidden="true"></span>
+            </div>
+            <div id="playlist"></div>
+            <div style=" margin-bottom: 20px;" id="download_block">
+                <a style=" margin: 10px;" id="download_mix" href="" download="Enhanced"><i class="fa fa-download">&nbsp; Download Mix</i></a> 
+                <a style=" margin: 10px;" id="download_acc" href="" download="Enhanced.wav"><i class="fa fa-download">&nbsp; Download Acc</i></a> 
+                <a style=" margin: 10px;" id="download_vocA" href="" download="Enhanced.wav"><i class="fa fa-download">&nbsp; Download Vocal A</i></a> 
+                <a style=" margin: 10px;" id="download_vocB" href="" download="Noise.wav"><i class="fa fa-download">&nbsp; Download Vocal B</i></a> 
+            </div>
+            <div id="demolist">
+            <div class="list-group" id="playlist">
+                <a href="/static/demo_wav/The Boy Is Mine" class="list-group-item">
+                    <i class="glyphicon glyphicon-play"></i>
+                    The Boy Is Mine</a>
+                <a href="/static/demo_wav/Material Girl" class="list-group-item">
+                    <i class="glyphicon glyphicon-play"></i>
+                    Material Girl</a>
+                <a href="/static/demo_wav/Without You" class="list-group-item">
+                    <i class="glyphicon glyphicon-play"></i>
+                    Without You</a>    
+                <a href="/static/demo_wav/一眼瞬間" class="list-group-item">
+                    <i class="glyphicon glyphicon-play"></i>
+                    一眼瞬間</a>
+                <a href="/static/demo_wav/演員" class="list-group-item">
+                    <i class="glyphicon glyphicon-play"></i>
+                    演員</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/waveform-playlist.var.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+<script type="text/javascript" src="/static/js/emitter.js"></script>
+
+<script> 
+    var clickedPause = false;
+    $(document).ready(function () {
+        
+        $('#audio_play').on("click", function(e) {
+            let video = document.getElementById("my_video");
+            if(clickedPause == false)
+                video.currentTime = 0;
+            video.play();
+        });
+        
+        $('#audio_pause').on("click", function(e) {
+            let video = document.getElementById("my_video");
+            video.pause();
+            clickedPause = true;
+        });
+        
+        $('#audio_stop').on("click", function(e) {
+            let video = document.getElementById("my_video");
+            video.currentTime = 0;
+            video.pause();
+            clickedPause = false;
+        });
+        
+        function audio_fileClicked() {
+            document.getElementById("audio_file").click();
+        }
+
+    });
+</script>
+
+</html>
