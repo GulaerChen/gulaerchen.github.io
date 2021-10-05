@@ -31,6 +31,8 @@ Please cite the paper to use the dataset.
 @article {singer_separation,
 author    = "Hsuan-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang",
 title     = "SINGER SEPARATION FOR KARAOKE CONTENT GENERATION",
+url       = "",
+publisher = "",
 year      = "2022"
 }
 ```
