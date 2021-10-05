@@ -6,6 +6,12 @@ The dataset consists of 4 types (Please refer to the paper to introduce various 
 ### Versions
 1.0.0 (default): No release notes.
 
+### Download datasets
+* <a href="https://drive.google.com/file/d/1F6yfdNEI6-e7j-Vp9_QqNOOK_6AuGIUu/view?usp=sharing" target="_blank"> EN-D </a>
+* <a href="https://drive.google.com/file/d/10eqvyE0YqEgdGjbaMwCGYb0YVNBE3cAY/view?usp=sharing" target="_blank"> CH-D </a>
+* <a href="https://drive.google.com/file/d/11d1iR5VGTLR6m9RRGCcmj97l5Zr-VsdQ/view?usp=sharing" target="_blank"> EN-S </a>
+* <a href="https://drive.google.com/file/d/12B5gN5Mia1jwFYwhl2gcQuIr9VpdiXmj/view?usp=sharing" target="_blank"> 3 Channel </a>
+
 ### Download size
 * EN-D: 17.0 GB
 * CH-D: 8.25 GB
@@ -33,9 +39,3 @@ publisher = "",
 year      = "2022"
 }
 ```
-### Download datasets
-* <a href="https://drive.google.com/file/d/1F6yfdNEI6-e7j-Vp9_QqNOOK_6AuGIUu/view?usp=sharing" target="_blank"> EN-D </a>
-* <a href="https://drive.google.com/file/d/10eqvyE0YqEgdGjbaMwCGYb0YVNBE3cAY/view?usp=sharing" target="_blank"> CH-D </a>
-* <a href="https://drive.google.com/file/d/11d1iR5VGTLR6m9RRGCcmj97l5Zr-VsdQ/view?usp=sharing" target="_blank"> EN-S </a>
-* <a href="https://drive.google.com/file/d/12B5gN5Mia1jwFYwhl2gcQuIr9VpdiXmj/view?usp=sharing" target="_blank"> 3 Channel </a>
-
