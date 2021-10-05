@@ -1,8 +1,7 @@
 # MIR-SingerSeparation Dataset
 
 ### Description
-The dataset consists of 4 types (Please refer to the paper to introduce various categories.) of singer separation datasets, each 10 seconds long. The male/female vocalist ratio for the English songs was 269:207, while that for the Chinese songs was 223:277. The tracks are all 8000Hz Mono 8-bit audio files in .wav format.
-
+The dataset consists of 4 types (Please refer to paper to introduce various categories.) of singer separation datasets, each track 10 seconds long, segments from 476 English and 500 Chinese songs, and male/female vocalist ratio for English songs was 269:207, while that for Chinese songs was 223:277. The tracks are all 8000Hz Mono 8-bit audio files in .wav format.
 ### Versions
 1.0.0 (default): No release notes.
 
