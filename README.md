@@ -30,11 +30,12 @@ The dataset consists of 4 types (Please refer to paper to introduce various cate
 
 Please cite the paper to use the dataset.
 ```
-@article {singer_separation,
-author    = "Hsuan-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang",
-title     = "SINGER SEPARATION FOR KARAOKE CONTENT GENERATION",
-url       = "",
-publisher = "",
-year      = "2022"
+@misc{chen2021singer,
+    title={Singer separation for karaoke content generation},
+    author={Hsuan-Yu Chen and Xuanjun Chen and Jyh-Shing Roger Jang},
+    year={2021},
+    eprint={2110.06707},
+    archivePrefix={arXiv},
+    primaryClass={cs.SD}
 }
 ```
