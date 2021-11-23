@@ -34,7 +34,7 @@ The dataset consists of 4 types (Please refer to paper to introduce various cate
 ### Citation
 
 Please cite the paper to use the dataset.
-```
+```bibtex
 @misc{chen2021singer,
     title={Singer separation for karaoke content generation},
     author={Hsuan-Yu Chen and Xuanjun Chen and Jyh-Shing Roger Jang},
