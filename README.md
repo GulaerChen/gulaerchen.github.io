@@ -11,10 +11,10 @@ The dataset consists of 4 types (Please refer to paper to introduce various cate
 
 
 ### Download datasets
-* <a href="https://drive.google.com/file/d/1F6yfdNEI6-e7j-Vp9_QqNOOK_6AuGIUu/view?usp=sharing" target="_blank"> EN-D </a>
-* <a href="https://drive.google.com/file/d/10eqvyE0YqEgdGjbaMwCGYb0YVNBE3cAY/view?usp=sharing" target="_blank"> CH-D </a>
-* <a href="https://drive.google.com/file/d/11d1iR5VGTLR6m9RRGCcmj97l5Zr-VsdQ/view?usp=sharing" target="_blank"> EN-S </a>
-* <a href="https://drive.google.com/file/d/12B5gN5Mia1jwFYwhl2gcQuIr9VpdiXmj/view?usp=sharing" target="_blank"> 3 Channel </a>
+* <a href="http://mirlab.org/dataset/public/EN-D.zip" target="_blank"> EN-D </a>
+* <a href="http://mirlab.org/dataset/public/CH-D.zip" target="_blank"> CH-D </a>
+* <a href="http://mirlab.org/dataset/public/EN-S.zip" target="_blank"> EN-S </a>
+* <a href="http://mirlab.org/dataset/public/3_Channel.zip" target="_blank"> 3 Channel </a>
 
 ### Download size
 * EN-D: 17.0 GB
