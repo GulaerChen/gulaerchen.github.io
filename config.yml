@@ -1,0 +1,72 @@
+#### general settings
+name: Singer Separation
+use_tb_logger: true
+num_spks: 2
+#### datasets
+datasets:
+  train:
+    dataroot_mix: /HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/tr_mix.scp
+    dataroot_targets: [/HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/tr_s1.scp,/HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/tr_s2.scp]
+
+  val:
+    dataroot_mix: /HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/cv_mix.scp
+    dataroot_targets: [/HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/cv_s1.scp,/HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/cv_s2.scp]
+  
+  dataloader_setting:
+    shuffle: true
+    num_workers: 1  # per GPU
+    batch_size: 5
+  
+  audio_setting:
+    sample_rate: 8000
+    chunk_size: 32000
+    least_size: 16000
+    
+
+#### network structures
+Dual_Path_RNN:
+  in_channels: 256
+  out_channels: 64 
+  hidden_channels: 128
+  kernel_size: 2
+  rnn_type: LSTM
+  norm: ln
+  dropout: 0
+  bidirectional: true
+  num_layers: 5
+  K: 250
+  num_spks: 2
+
+#### training settings: learning rate scheme, loss
+train:
+  epoch: 100
+  early_stop: 10
+  path: /HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/checkpoint
+  gpuid: [1]
+
+#### Optimizer settings
+optim:
+  name: Adam   ### Adam, RMSprop, SGD
+  lr: !!float 5e-4
+  momentum: 0
+  weight_decay: 0
+  clip_norm: 5
+
+#### scheduler settings
+scheduler:
+  min_lr: !!float 1e-8
+  patience: 2
+  factor: 0.5
+
+#### Resume training settings
+resume:
+  state: false
+  path: /HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/checkpoint
+
+#### logger
+logger:
+  name: DPCL
+  path: /HDD/Vocal_Separation/Dual-Path-RNN-Pytorch/checkpoint
+  screen: false
+  tofile: true
+  print_freq: 1000
