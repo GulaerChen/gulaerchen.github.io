@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jan  9 12:39:48 2022
-
-@author: Gulae
-"""
-
 import pickle
 import os
 import numpy as np
