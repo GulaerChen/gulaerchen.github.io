@@ -61,4 +61,4 @@ if __name__ == '__main__':
     for file in audio_names:
         print("======================")
         print('Song ID:' + file.split('.')[0])
-        print('Auto-Selection modle:' + auto_selection_model(path, file))
+        print('Auto-Selection model:' + auto_selection_model(path, file))
