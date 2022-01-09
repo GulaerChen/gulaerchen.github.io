@@ -1,3 +1,5 @@
+### cofig for DPRNN (https://github.com/JusperLee/Dual-Path-RNN-Pytorch)
+
 #### general settings
 name: Singer Separation
 use_tb_logger: true
