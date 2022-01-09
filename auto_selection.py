@@ -54,9 +54,9 @@ def auto_selection_model(path, file):
 
 if __name__ == '__main__':    
     
-    src_root = './pitch_data/EN_D'
+    src_root = './pitch_data_in_auto_selection/EN_D'
     audio_names = os.listdir(src_root)
-    path = './pitch_data/'
+    path = './pitch_data_in_auto_selection/'
     a = []
     for file in audio_names:
         print("======================")
